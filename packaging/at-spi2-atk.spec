@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name: at-spi2-atk
 Version: 2.5.92
 Release: 1
@@ -13,6 +15,9 @@ BuildRequires: glib2-devel
 BuildRequires: atk-devel
 BuildRequires: at-spi2-core-devel
 BuildRequires: gettext
+%if ! %{with x}
+ExclusiveArch:
+%endif
 
 BuildRoot: %{buildroot}
 
