@@ -48,6 +48,7 @@ accessibility toolkit. This version is based on dbus.
 %setup -q
 
 %build
+%autogen
 %configure
 make %{?_smp_flags}
 
